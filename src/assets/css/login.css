@@ -1,0 +1,11 @@
+#passwordFieldLabel:before {
+  font-family: 'Material Icons';
+  content: "lock";
+  padding-right: 5px;
+}
+
+#usernameFieldLabel:before {
+  font-family: 'Material Icons';
+  content: "person";
+  padding-right: 5px;
+}

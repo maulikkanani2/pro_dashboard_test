@@ -1,0 +1,74 @@
+{
+  "updated": 1527105797.796,
+  "created": 1523944083.375,
+  "pipelineVersion": 7,
+  "pipelineName": "pro-dashboard-pipeline",
+  "stageStates": [
+    {
+      "actionStates": [
+        {
+          "actionName": "Source",
+          "revisionUrl": "https://github.com/ailytic/pro_dashboard/commit/1ba3bd3b49833bf6f79f15ab7ac0aa0d928dccd7",
+          "entityUrl": "https://github.com/ailytic/pro_dashboard/tree/develop",
+          "latestExecution": {
+            "status": "Succeeded",
+            "lastStatusChange": 1529064476.94
+          },
+          "currentRevision": {
+            "revisionId": "1ba3bd3b49833bf6f79f15ab7ac0aa0d928dccd7",
+            "created": 1529064476.929
+          }
+        }
+      ],
+      "latestExecution": {
+        "pipelineExecutionId": "42a687a1-1b4b-457b-af39-4bc0315e17ea",
+        "status": "Succeeded"
+      },
+      "stageName": "Source"
+    },
+    {
+      "actionStates": [
+        {
+          "actionName": "Artifact",
+          "entityUrl": "https://ap-southeast-2.console.aws.amazon.com/codebuild/home?#/projects/pro-dashboard-build/view",
+          "latestExecution": {
+            "status": "InProgress",
+            "lastStatusChange": 1529064482.509,
+            "externalExecutionUrl": "https://ap-southeast-2.console.aws.amazon.com/codebuild/home?#/builds/pro-dashboard-build:ebafc0aa-d89f-4ad0-8706-a256601f8367/view/new",
+            "externalExecutionId": "pro-dashboard-build:ebafc0aa-d89f-4ad0-8706-a256601f8367"
+          }
+        }
+      ],
+      "inboundTransitionState": {
+        "enabled": true
+      },
+      "latestExecution": {
+        "pipelineExecutionId": "42a687a1-1b4b-457b-af39-4bc0315e17ea",
+        "status": "InProgress"
+      },
+      "stageName": "Deploy"
+    },
+    {
+      "actionStates": [
+        {
+          "actionName": "Cloudfront_Invalidation",
+          "entityUrl": "https://ap-southeast-2.console.aws.amazon.com/lambda/home#/functions/Cloudfront-invalidator",
+          "latestExecution": {
+            "status": "Succeeded",
+            "lastStatusChange": 1528867627.388,
+            "externalExecutionUrl": "https://ap-southeast-2.console.aws.amazon.com/cloudwatch/home#logStream:group=%252Faws%252Flambda%252FCloudfront-invalidator",
+            "externalExecutionId": "Cloudfront-invalidator"
+          }
+        }
+      ],
+      "inboundTransitionState": {
+        "enabled": true
+      },
+      "latestExecution": {
+        "pipelineExecutionId": "0ad7f9e6-2234-45ff-a68e-73c33064b7d0",
+        "status": "Succeeded"
+      },
+      "stageName": "Invalidate_CloudFront"
+    }
+  ]
+}

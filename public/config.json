@@ -1,0 +1,21 @@
+{
+  "schedulerUrl": "http://localhost:8082",
+  "analyticsUrl": "http://localhost:8082",
+  "graphqlEndpoint": "http://localhost:8080/graphql",
+  "importEndpoint": "http://localhost:3201/import",
+  "iamEndpoint": "http://localhost:3200/api",
+  "yurbi": {
+    "enabled": false
+  },
+  "cognito": {
+    "enabled": true,
+    "userPoolId": "",
+    "userPoolClientId": "",
+    "region": ""
+  },
+  "logging": {
+    "enabled": true,
+    "key": "241c5d1dce16449cb95479b00952042e",
+    "project": "291540"
+  }
+}
